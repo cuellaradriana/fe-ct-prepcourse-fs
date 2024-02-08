@@ -4,6 +4,15 @@ function encontrarNumeroFaltante(numeros) {
   // y retórnalo.
   // Devuelve null si el aray es vacío o si no hay números faltantes.
   // Tu código:
+  var faltante=null
+  if (numeros.length===0) return faltante
+  for (let i = 0; i < numeros.length; i++) {
+    if ((numeros[i+1]-numeros[i])>1) {
+      faltante=numeros[i]+1
+    }
+  }
+
+  return faltante
 }
 
 module.exports = encontrarNumeroFaltante;
